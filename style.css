@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e6;
+    /* Світлий фон */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    background-color: #fff;
+    /* Білий фон для контейнера */
+    color: #ff6600;
+    /* Помаранчевий текст */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1200px;
+    /* Збільшена максимальна ширина */
+    overflow-y: auto;
+    /* Дозволити прокрутку для вмісту */
+    max-height: 90vh;
+    /* Обмеження максимального висоти */
+    animation: containerSlideIn 1s ease-out;
+}
+
+@keyframes containerSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: headerFadeIn 2s ease-in-out;
+}
+
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.logo {
+    width: 100px;
+    /* Ширина логотипу */
+    height: auto;
+    margin-right: 15px;
+    animation: logoBounce 1.5s infinite;
+    /* Анімація для логотипу */
+    border: 4px solid orangered
+}
+
+@keyframes logoBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    animation: textFadeIn 3s ease-in-out;
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.intro {
+    margin: 10px 0 20px;
+    animation: introSlideIn 2s ease-out;
+}
+
+@keyframes introSlideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-card {
+    background-color: #ffcc80;
+    /* Світліший відтінок помаранчевого для карток */
+    color: black;
+    /* Чорний текст */
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px;
+    /* Відступ між картками */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    animation: categoryFadeIn 1s ease-in-out, categorySlideIn 0.5s ease-out;
+}
+
+@keyframes categoryFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes categorySlideIn {
+    from {
+        transform: translateX(-20px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    background-color: #ffb74d;
+    /* Темніший відтінок помаранчевого при наведенні */
+}
+
+.doctor-image {
+    height: 80px;
+    /* Розмір зображення лікарів */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    /* Відступ знизу */
+}
+
+.hospital-description {
+    margin-top: 20px;
+    text-align: left;
+    /* Вирівнювання тексту по лівому краю */
+    padding: 0 20px;
+    /* Внутрішні відступи */
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    color: #ff6600;
+    /* Помаранчевий текст у футері */
+    background-color: #ffe0b2;
+    /* Світлий помаранчевий фон для футера */
+    padding: 10px;
+    border-radius: 10px;
+    animation: footerSlideIn 2s ease-out;
+}
+
+@keyframes footerSlideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #ff6600;
+    /* Помаранчевий фон для кнопок */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    /* Відступ для кнопок */
+}
+
+button:hover {
+    background-color: #e65100;
+    /* Темніший відтінок помаранчевого при наведенні */
+}
+
+iframe {
+    border: 3px solid orange
+}
+
+
+
+.doctor-list li a {
+    color: rgb(63, 42, 3);
+    text-decoration: none;
+    border: solid rgb(234, 173, 59);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(177, 138, 65);
+}
+
+
+.doctor-list li:hover {
+    transition: 0.3s linear;
+    transform: scale(1.1);
+}
