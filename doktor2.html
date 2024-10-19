@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опис лікаря</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Наші Медичні Послуги</h1>
+    </header>
+    
+    <div class="container">
+        <!-- Информация о враче -->
+        <div class="doctor-info">
+            <h3>Фото лікаря:</h3>
+            <div class="photo-placeholder">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjuiT7mz8RR4_b_P8Ei_tTxF5TA61aciDARQ&s" alt="Фото лікаря">
+            </div>
+           <h2>Хірург: Валерія Олексієвна</h2>
+            <p>Оперує вже 15 років. 1 прийом БЕЗКОШТОВНО
+                подалі прийоми ПЛАТНІ! дуже багато  задовільнених відгуків!
+                виконує свою роботу професійно.
+                ||ЗАПИС  ТА ОПЕРАЦІЇ НА УТОЧНЮВАННЯ ЦІН
+                ПИШІТЬ НА МЕЙЛ АБО ПРИХОДЬТЕ У ЛІКАРНЮ||
+               
+            </p>
+
+            <!-- Кнопка для открытия модального окна -->
+            <label for="modal-toggle" class="order-btn">Замовити консультацію</label>
+        </div>
+
+        <!-- Секция для видео -->
+        <div class="video-section">
+            <div class="video-placeholder">
+                <span>Відео про наші умови та кабінет</span>
+            </div>
+            <iframe width="200" height="200" src="https://www.youtube.com/embed/JBty9sV7Omc" title="Orthopaedic Theatres 360° VR Taster" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Местоположение кабинета -->
+        <div class="location">
+            <p>Наш кабінет знаходиться на 2 поверсі, 12 кабінет. БЕЗ СТУКУ НЕ ЗАХОДИТИ!!!</p>
+        </div>
+    </div>
+
+    <!-- Модальное окно для ошибки 404 -->
+    <input type="checkbox" id="modal-toggle" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <label for="modal-toggle" class="close">&times;</label>
+            <h2> ПОМИЛКА! Код: 404 </h2>
+            <p>На жаль, щось пішло не так. Сторінка, яку ви шукаєте, не знайдена.</p>
+        </div>
+    </div>
+</body>
+</html>
