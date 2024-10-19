@@ -1,203 +1,161 @@
-/* Основные стили для body */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #F7C04A; /* Светло-оранжевый фон */
+/* Загальні стилі */
+* {
     margin: 0;
     padding: 0;
-    color: #4A2E1C; /* Темно-коричневый текст */
+    box-sizing: border-box;
 }
 
-/* Стили для заголовка */
-header {
-    background-color: #A35224; /* Коричневый заголовок */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-h1 {
-    margin: 0;
-    font-size: 2.2em;
-    font-weight: bold;
-}
-
-/* Контейнер с гибкой разметкой */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px 20px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-/* Оформление блока с информацией о враче */
-.doctor-info {
-    background-color: #D27D2D; /* Оранжево-коричневый фон */
+/* Заголовок */
+header {
+    background-color: #3a7bd5;
+    padding: 20px;
     color: white;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 20px;
-    max-width: 400px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Мягкие тени */
     text-align: center;
-    overflow-wrap: break-word;
 }
 
-.doctor-info h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: white; /* Белый текст для заголовков */
+header h1 {
+    font-size: 2rem;
 }
 
-/* Фото врача */
+/* Стилі для секції з інформацією про лікаря */
+.doctor-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .photo-placeholder {
-    background-color: #F3E0C5; /* Светлый фон для фото */
-    height: 150px;
     width: 150px;
-    margin: 0 auto 20px auto;
+    height: 150px;
+    margin: 0 auto 20px;
+    background-color: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%; /* Круглый аватар */
-    font-size: 1.2em;
-    color: #8A2E0D; /* Темно-коричневый цвет для текста внутри */
+    border-radius: 50%;
     overflow: hidden;
 }
 
-/* Изображение врача */
 .photo-placeholder img {
-    height: 100%;
     width: 100%;
-    object-fit: cover; /* Устанавливаем, чтобы изображение полностью заполнило круг */
+    height: auto;
 }
 
-h2 {
-    margin: 10px 0;
-    font-size: 1.6em;
-    color: white;
+.doctor-info h2 {
+    font-size: 1.8rem;
+    color: #3a7bd5;
+    margin-bottom: 10px;
 }
 
-/* Кнопка заказа консультации */
+.doctor-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Стилі для кнопки замовлення консультації */
 .order-btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #8A2E0D; /* Темно-коричневая кнопка */
+    background-color: #3a7bd5;
     color: white;
+    text-transform: uppercase;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .order-btn:hover {
-    background-color: #6E210A; /* Более тёмный коричневый при наведении */
+    background-color: #305f99;
 }
 
-/* Секция для видео */
+/* Секція для відео */
 .video-section {
-    background-color: #FF9F45; /* Ярко-оранжевый блок */
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.video-section:hover {
-    transform: scale(1.05); /* Легкое увеличение при наведении */
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .video-placeholder {
     width: 100%;
-    height: 200px;
-    background-color: #F3E0C5;
+    height: 300px;
+    background-color: #ddd;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #8A2E0D; /* Темно-коричневый */
+    font-size: 1.2rem;
+    color: #666;
 }
 
-/* Местоположение */
+/* Секція місця розташування */
 .location {
-    background-color: #A35224; /* Коричневый блок */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
     text-align: center;
-    max-width: 400px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Ограничение для текста, чтобы он не выходил за рамки блока */
-p {
-    word-wrap: break-word;
-    margin: 0;
-    font-size: 1.1em;
-    line-height: 1.5;
+.location p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #d9534f;
 }
 
-/* Общие стили для адаптации макета */
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-/* Чекбокс для управления модальным окном */
-.modal-toggle {
-    display: none;
-}
-
-/* Стили для модального окна */
+/* Стилі для модального вікна */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
-/* Показываем модальное окно, если чекбокс включен */
 .modal-toggle:checked + .modal {
-    display: block;
+    display: flex;
 }
 
 .modal-content {
-    background-color: #F7C04A; /* Оранжевый фон */
-    margin: 15% auto;
+    background-color: white;
     padding: 20px;
-    border-radius: 10px;
-    width: 80%;
+    border-radius: 8px;
     max-width: 500px;
+    width: 100%;
     text-align: center;
 }
 
+.modal-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
 .close {
-    color: #A35224;
-    font-size: 24px;
-    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333;
     cursor: pointer;
-}
-
-.close:hover {
-    color: #6E210A;
-}
-
-.modal h2 {
-    margin-top: 0;
-    color: #8A2E0D;
-}
-
-.modal p {
-    color: #4A2E1C;
 }
