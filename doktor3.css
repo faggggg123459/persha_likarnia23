@@ -1,0 +1,87 @@
+/* Основные стили для body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F7C04A; /* Светло-оранжевый фон */
+    margin: 0;
+    padding: 0;
+    color: #4A2E1C; /* Темно-коричневый текст */
+}
+
+/* Стили для заголовка */
+header {
+    background-color: #A35224; /* Коричневый заголовок */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+/* Контейнер для основного контента */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Центрирование по вертикали */
+}
+
+/* Оформление блока сообщения */
+.message-box {
+    background-color: #D27D2D; /* Оранжево-коричневый фон */
+    color: white;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Мягкие тени */
+    word-wrap: break-word;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Кнопка возврата */
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #8A2E0D; /* Темно-коричневая кнопка */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #6E210A; /* Темнее при наведении */
+}
+
+/* Мобильная адаптация */
+@media screen and (max-width: 768px) {
+    .message-box {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
