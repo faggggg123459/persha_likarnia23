@@ -1,161 +1,191 @@
-/* Загальні стилі */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Основні стилі для body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    background-color: #F7C04A; /* Світло-оранжевий фон */
+    margin: 0;
+    padding: 0;
+    color: #4A2E1C; /* Темно-коричневий текст */
 }
 
-.container {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-/* Заголовок */
+/* Стилі для заголовка */
 header {
-    background-color: #3a7bd5;
-    padding: 20px;
+    background-color: #A35224; /* Коричневий заголовок */
     color: white;
+    padding: 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2rem;
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
 }
 
-/* Стилі для секції з інформацією про лікаря */
-.doctor-info {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.photo-placeholder {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 20px;
-    background-color: #ddd;
+/* Контейнер з гнучкою розміткою */
+.container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    border-radius: 50%;
-    overflow: hidden;
+    padding: 40px 20px;
 }
 
-.photo-placeholder img {
-    width: 100%;
-    height: auto;
+/* Оформлення блоку з інформацією про лікаря */
+.doctor-info {
+    background-color: #D27D2D; /* Оранжево-коричневий фон */
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    max-width: 400px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* М'які тіні */
+    text-align: center;
 }
 
 .doctor-info h2 {
-    font-size: 1.8rem;
-    color: #3a7bd5;
     margin-bottom: 10px;
+    font-size: 1.6em;
+    color: white;
 }
 
-.doctor-info p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #666;
+/* Фото лікаря */
+.photo-placeholder {
+    background-color: #F3E0C5; /* Світлий фон для фото */
+    height: 150px;
+    width: 150px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Круглий аватар */
+    font-size: 1.2em;
+    color: #8A2E0D; /* Темно-коричневий колір для тексту всередині */
 }
 
-/* Стилі для кнопки замовлення консультації */
+/* Кнопка замовлення консультації */
 .order-btn {
     display: inline-block;
+    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #3a7bd5;
+    background-color: #8A2E0D; /* Темно-коричнева кнопка */
     color: white;
-    text-transform: uppercase;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .order-btn:hover {
-    background-color: #305f99;
+    background-color: #6E210A; /* Темніше при наведенні */
 }
 
 /* Секція для відео */
 .video-section {
-    text-align: center;
-    margin-bottom: 40px;
+    background-color: #FF9F45; /* Яскраво-оранжевий блок */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-section:hover {
+    transform: scale(1.05); /* Легке збільшення при наведенні */
 }
 
 .video-placeholder {
     width: 100%;
-    height: 300px;
-    background-color: #ddd;
+    height: 200px;
+    background-color: #F3E0C5;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    color: #666;
+    color: #8A2E0D; /* Темно-коричневий */
 }
 
-/* Секція місця розташування */
+/* Місцезнаходження */
 .location {
+    background-color: #A35224; /* Коричневий блок */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
     text-align: center;
-    margin-bottom: 20px;
+    max-width: 400px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.location p {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #d9534f;
+/* Текстовий блок */
+p {
+    word-wrap: break-word;
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Чекбокс для управління модальним вікном */
+.modal-toggle {
+    display: none;
 }
 
 /* Стилі для модального вікна */
 .modal {
     display: none;
     position: fixed;
-    top: 0;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 999;
 }
 
+/* Відображаємо модальне вікно при включеному чекбоксі */
 .modal-toggle:checked + .modal {
     display: flex;
 }
 
 .modal-content {
-    background-color: white;
+    background-color: #F7C04A; /* Оранжевий фон */
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
+    width: 80%;
     max-width: 500px;
-    width: 100%;
     text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.modal-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+.modal h2 {
+    color: #8A2E0D;
 }
 
-.modal-content p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+.modal p {
+    color: #4A2E1C;
 }
 
 .close {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 2rem;
-    color: #333;
+    font-size: 24px;
+    color: #A35224;
     cursor: pointer;
+}
+
+.close:hover {
+    color: #6E210A;
 }
