@@ -143,12 +143,12 @@ p {
 }
 
 /* Общие стили для адаптации макета */
-@media screen and (max-width: 768px) {
+
     .container {
         flex-direction: column;
         align-items: center;
     }
-}
+
 
 /* Чекбокс для управления модальным окном */
 .modal-toggle {
@@ -192,6 +192,7 @@ p {
 .close:hover {
     color: #6E210A;
 }
+
 .modal h2 {
     margin-top: 0;
     color: #8A2E0D;
