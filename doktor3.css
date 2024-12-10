@@ -1,87 +1,219 @@
-/* Основные стили для body */
+/* doktor1.css */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #F7C04A; /* Светло-оранжевый фон */
+    font-family: Arial, sans-serif;
+    background-color: #FFE4C4; /* Мягко-оранжевый фон */
     margin: 0;
     padding: 0;
-    color: #4A2E1C; /* Темно-коричневый текст */
+    animation: fadeIn 2s ease-in;
 }
 
-/* Стили для заголовка */
 header {
-    background-color: #A35224; /* Коричневый заголовок */
-    color: white;
-    padding: 20px 0;
+    background-color: #8B4513; /* Темно-коричневый */
+    color: #FFF;
     text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: slideInDown 1.5s ease;
 }
 
 h1 {
+    font-size: 2.5rem;
     margin: 0;
-    font-size: 2.2em;
-    font-weight: bold;
 }
 
-/* Контейнер для основного контента */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh; /* Центрирование по вертикали */
-}
-
-/* Оформление блока сообщения */
-.message-box {
-    background-color: #D27D2D; /* Оранжево-коричневый фон */
-    color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #FFF5E1; /* Светло-кремовый */
     border-radius: 10px;
-    padding: 40px;
-    text-align: center;
-    max-width: 600px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Мягкие тени */
-    word-wrap: break-word;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: fadeInUp 1.8s ease;
 }
 
-h2 {
-    font-size: 2em;
+.doctor-info {
+    text-align: center;
     margin-bottom: 20px;
 }
 
+.photo-placeholder img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #D2691E; /* Темно-оранжевый */
+    animation: pulse 2s infinite;
+}
+
+h2 {
+    color: #8B4513; /* Темно-коричневый */
+    margin-top: 10px;
+}
+
 p {
-    font-size: 1.2em;
+    font-size: 1rem;
+    color: #5A3D2E; /* Коричневый */
     margin: 10px 0;
-    line-height: 1.6;
 }
 
-/* Кнопка возврата */
-.back-btn {
+.order-btn {
     display: inline-block;
-    margin-top: 30px;
-    padding: 12px 24px;
-    background-color: #8A2E0D; /* Темно-коричневая кнопка */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #FF7F50; /* Ярко-оранжевый */
+    color: #FFF;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounce 2s infinite;
 }
 
-.back-btn:hover {
-    background-color: #6E210A; /* Темнее при наведении */
+.order-btn:hover {
+    background-color: #D2691E; /* Темно-оранжевый */
+    transform: scale(1.1);
 }
 
-/* Мобильная адаптация */
-@media screen and (max-width: 768px) {
-    .message-box {
-        padding: 20px;
-        max-width: 90%;
-    }
+.video-section {
+    text-align: center;
+    margin: 20px 0;
+}
 
-    h1 {
-        font-size: 1.8em;
-    }
+.video-placeholder {
+    font-size: 1rem;
+    color: #5A3D2E;
+    margin-bottom: 10px;
+}
 
-    h2 {
-        font-size: 1.6em;
+iframe {
+    border-radius: 10px;
+    border: 3px solid #D2691E; /* Темно-оранжевый */
+}
+
+.location {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #5A3D2E;
+    font-weight: bold;
+    animation: slideInLeft 2s ease;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.modal-content {
+    background-color: #FFF5E1; /* Светло-кремовый */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Скрываем чекбокс */
+.modal-toggle {
+    display: none; /* Полностью скрываем чекбокс */
+}
+
+
+.modal-toggle:checked + .modal {
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #D2691E;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #FF4500; /* Ярко-оранжевый */
+}
+
+.modal h2 {
+    color: #8B4513; /* Темно-коричневый */
+    margin: 10px 0;
+}
+
+.modal p {
+    font-size: 1rem;
+    color: #5A3D2E;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        border-color: #D2691E;
+    }
+    50% {
+        transform: scale(1.05);
+        border-color: #FF4500;
     }
 }
