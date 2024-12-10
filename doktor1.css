@@ -124,11 +124,6 @@ iframe {
     position: relative;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-/* Скрываем чекбокс */
-.modal-toggle {
-    display: none; /* Полностью скрываем чекбокс */
-}
-
 
 .modal-toggle:checked + .modal {
     display: flex;
