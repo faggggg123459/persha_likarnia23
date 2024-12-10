@@ -1,10 +1,11 @@
 /* doktor1.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FFE4C4; /* Мягко-оранжевый фон */
+    font-family: 'Arial', sans-serif;
+    background-color: #FFE4C4; /* Мягкий оранжевый фон */
     margin: 0;
     padding: 0;
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 1.5s ease-in;
+    color: #5A3D2E; /* Коричневый текст */
 }
 
 header {
@@ -12,7 +13,7 @@ header {
     color: #FFF;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: slideInDown 1.5s ease;
 }
 
@@ -26,9 +27,9 @@ h1 {
     max-width: 800px;
     background-color: #FFF5E1; /* Светло-кремовый */
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    animation: fadeInUp 1.8s ease;
+    animation: fadeInUp 1.5s ease;
 }
 
 .doctor-info {
@@ -51,7 +52,6 @@ h2 {
 
 p {
     font-size: 1rem;
-    color: #5A3D2E; /* Коричневый */
     margin: 10px 0;
 }
 
@@ -96,9 +96,8 @@ iframe {
     text-align: center;
     margin: 20px 0;
     font-size: 1rem;
-    color: #5A3D2E;
     font-weight: bold;
-    animation: slideInLeft 2s ease;
+    animation: slideInLeft 1.5s ease;
 }
 
 .modal {
@@ -124,11 +123,10 @@ iframe {
     position: relative;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-/* Скрываем чекбокс */
+
 .modal-toggle {
     display: none; /* Полностью скрываем чекбокс */
 }
-
 
 .modal-toggle:checked + .modal {
     display: flex;
@@ -156,7 +154,6 @@ iframe {
 
 .modal p {
     font-size: 1rem;
-    color: #5A3D2E;
 }
 
 /* Анимации */
