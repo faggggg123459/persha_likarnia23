@@ -1,191 +1,219 @@
-/* Основні стилі для body */
+/* doktor1.css */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #FFEB3B; /* Яскраво-жовтий фон */
+    font-family: Arial, sans-serif;
+    background-color: #FFE4C4; /* Мягко-оранжевый фон */
     margin: 0;
     padding: 0;
-    color: #5D3A0E; /* Темно-коричневий текст */
+    animation: fadeIn 2s ease-in;
 }
 
-/* Стилі для заголовка */
 header {
-    background-color: #6D4C41; /* Коричневий заголовок */
-    color: white;
-    padding: 20px;
+    background-color: #8B4513; /* Темно-коричневый */
+    color: #FFF;
     text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: slideInDown 1.5s ease;
 }
 
-header h1 {
+h1 {
+    font-size: 2.5rem;
     margin: 0;
-    font-size: 2.2em;
-    font-weight: bold;
 }
 
-/* Контейнер з гнучкою розміткою */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px 20px;
-}
-
-/* Оформлення блоку з інформацією про лікаря */
-.doctor-info {
-    background-color: #FFA726; /* Помаранчевий фон */
-    color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #FFF5E1; /* Светло-кремовый */
     border-radius: 10px;
-    padding: 30px;
-    margin: 20px;
-    max-width: 400px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* М'які тіні */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: fadeInUp 1.8s ease;
+}
+
+.doctor-info {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.doctor-info h2 {
-    margin-bottom: 10px;
-    font-size: 1.6em;
-    color: white;
+.photo-placeholder img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #D2691E; /* Темно-оранжевый */
+    animation: pulse 2s infinite;
 }
 
-/* Фото лікаря */
-.photo-placeholder {
-    background-color: #FFE082; /* Світло-жовтий фон для фото */
-    height: 150px;
-    width: 150px;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; /* Круглий аватар */
-    font-size: 1.2em;
-    color: #5D3A0E; /* Темно-коричневий колір для тексту всередині */
+h2 {
+    color: #8B4513; /* Темно-коричневый */
+    margin-top: 10px;
 }
 
-/* Кнопка замовлення консультації */
+p {
+    font-size: 1rem;
+    color: #5A3D2E; /* Коричневый */
+    margin: 10px 0;
+}
+
 .order-btn {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 10px 20px;
-    background-color: #5D3A0E; /* Темно-коричнева кнопка */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    background-color: #FF7F50; /* Ярко-оранжевый */
+    color: #FFF;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounce 2s infinite;
 }
 
 .order-btn:hover {
-    background-color: #4E2D0A; /* Темніше при наведенні */
+    background-color: #D2691E; /* Темно-оранжевый */
+    transform: scale(1.1);
 }
 
-/* Секція для відео */
 .video-section {
-    background-color: #FFB74D; /* Світло-оранжевий блок */
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.video-section:hover {
-    transform: scale(1.05); /* Легке збільшення при наведенні */
+    text-align: center;
+    margin: 20px 0;
 }
 
 .video-placeholder {
-    width: 100%;
-    height: 200px;
-    background-color: #FFE082; /* Світло-жовтий */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #5D3A0E; /* Темно-коричневий */
+    font-size: 1rem;
+    color: #5A3D2E;
+    margin-bottom: 10px;
 }
 
-/* Місцезнаходження */
-.location {
-    background-color: #6D4C41; /* Коричневий блок */
-    color: white;
-    padding: 20px;
+iframe {
     border-radius: 10px;
-    margin: 20px;
+    border: 3px solid #D2691E; /* Темно-оранжевый */
+}
+
+.location {
     text-align: center;
-    max-width: 400px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #5A3D2E;
+    font-weight: bold;
+    animation: slideInLeft 2s ease;
 }
 
-/* Текстовий блок */
-p {
-    word-wrap: break-word;
-    margin: 0;
-    font-size: 1.1em;
-    line-height: 1.5;
-}
-
-/* Адаптивні стилі для мобільних пристроїв */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Чекбокс для управління модальним вікном */
-.modal-toggle {
-    display: none;
-}
-
-/* Стилі для модального вікна */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
-}
-
-/* Відображаємо модальне вікно при включеному чекбоксі */
-.modal-toggle:checked + .modal {
-    display: flex;
+    animation: fadeIn 0.5s ease;
 }
 
 .modal-content {
-    background-color: #FFEB3B; /* Яскраво-жовтий фон */
+    background-color: #FFF5E1; /* Светло-кремовый */
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Скрываем чекбокс */
+.modal-toggle {
+    display: none; /* Полностью скрываем чекбокс */
 }
 
-.modal h2 {
-    color: #5D3A0E; /* Темно-коричневий текст */
-}
 
-.modal p {
-    color: #5D3A0E; /* Темно-коричневий текст */
+.modal-toggle:checked + .modal {
+    display: flex;
 }
 
 .close {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 24px;
-    color: #6D4C41; /* Коричневий */
+    right: 10px;
+    font-size: 1.5rem;
+    color: #D2691E;
     cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .close:hover {
-    color: #4E2D0A; /* Темніше при наведенні */
+    color: #FF4500; /* Ярко-оранжевый */
+}
+
+.modal h2 {
+    color: #8B4513; /* Темно-коричневый */
+    margin: 10px 0;
+}
+
+.modal p {
+    font-size: 1rem;
+    color: #5A3D2E;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        border-color: #D2691E;
+    }
+    50% {
+        transform: scale(1.05);
+        border-color: #FF4500;
+    }
 }
