@@ -1,37 +1,78 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff4e6; /* Кремовий тон */
-  color: #d35400; /* Помаранчевий тон */
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: linear-gradient(135deg, #FFDAC1, #FFABAB, #FFC3A0);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 10s infinite;
+  color: #4B2E2E;
 }
-
 .container {
-  text-align: center;
-  background-color: #fdebd0; /* Світлий кремовий */
-  border: 2px solid #d35400; /* Помаранчевий обідок */
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease;
 }
-
-input, button {
-  margin: 10px 0;
+h1 {
+  text-align: center;
+  color: #FF8C42;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+input {
+  width: 100%;
   padding: 10px;
-  width: 80%;
-  border: 1px solid #d35400;
+  margin-bottom: 10px;
+  border: 1px solid #FFB862;
   border-radius: 5px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
-
+input:focus {
+  box-shadow: 0 0 10px #FF8C42;
+  transform: scale(1.05);
+}
 button {
-  background-color: #d35400;
-  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #FF8C42;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
-
 button:hover {
-  background-color: #e67e22;
+  background-color: #D97341;
+  transform: scale(1.1);
+}
+#result {
+  margin-top: 20px;
+  text-align: center;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
