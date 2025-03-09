@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Калькулятор здоров'я</title>
   <link rel="stylesheet" href="doktor3.css">
-
 </head>
 <body>
   <div class="container">
@@ -20,6 +19,12 @@
       <label for="weight">Вага (кг):</label>
       <input type="number" id="weight" required>
 
+      <label for="pulse">Пульс (уд/хв):</label>
+      <input type="number" id="pulse" required>
+
+      <label for="activity">Рівень активності (1-10):</label>
+      <input type="number" id="activity" min="1" max="10" required>
+
       <button type="button" id="calculate-button">Розрахувати</button>
     </form>
     <div id="result"></div>
@@ -30,8 +35,10 @@
       const age = document.getElementById("age").value;
       const height = document.getElementById("height").value;
       const weight = document.getElementById("weight").value;
+      const pulse = document.getElementById("pulse").value;
+      const activity = document.getElementById("activity").value;
 
-      if (!age || !height || !weight) {
+      if (!age || !height || !weight || !pulse || !activity) {
         alert("Будь ласка, заповніть усі поля!");
         return;
       }
@@ -47,8 +54,17 @@
         healthStatus = "Надмірна вага";
       }
 
+      const pulseStatus = pulse < 60 ? "Пульс занадто низький" :
+                         pulse > 100 ? "Пульс занадто високий" : "Пульс у нормі";
+
+      const activityLevel = activity < 4 ? "Малорухливий спосіб життя" :
+                           activity > 7 ? "Висока активність" : "Помірна активність";
+
       document.getElementById("result").innerHTML =
-        `<p>Ваш ІМТ: ${bmi}</p><p>Статус: ${healthStatus}</p>`;
+        `<p>Ваш ІМТ: ${bmi}</p>
+         <p>Статус: ${healthStatus}</p>
+         <p>${pulseStatus}</p>
+         <p>Рівень активності: ${activityLevel}</p>`;
     });
   </script>
 </body>
